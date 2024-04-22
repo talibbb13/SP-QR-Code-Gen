@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+}
+
+#con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    flex-direction: column;
+    padding: 1vw 2vw;
+    border-radius: 0.3vw;
+    gap: 0.5vw;
+}
+
+#con label {
+    font-size: 1.2vw;
+    font-weight: 500;
+    align-self: start;
+}
+
+#con label::selection {
+    background-color: royalblue;
+    color: white;
+}
+
+#con input[type="text"] {
+    outline: none;
+    width: 100%;
+    border: 1.5px solid gray;
+    border-radius: 3px;
+    padding: 0.3vw 1vw;
+    padding-bottom: 0.7vw;
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+.shake{
+    animation: shakeMe .3s alternate-reverse 3 linear;
+}
+
+#img {
+    width: 20vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in 1s;
+}
+
+#con img {
+    height: 100%;
+    width: 100%;
+    margin: 1vw 0;
+    border-radius: 0.5vw;
+}
+
+#con button {
+    outline: none;
+    padding: 0.5vw 1.5vw;
+    background: #5176e5;
+    border: none;
+    border-radius: 0.3vw;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1vw;
+    letter-spacing: .5px;
+    transition: all ease-in-out .2s;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+#con button:hover {
+    border: 3px solid #a2b9ff;
+    background: royalblue;
+}
+
+#genAgainBtn{
+    display: none;
+}
+
+@keyframes shakeMe {
+    0%{
+        transform: translateX(-3px);
+    }
+    25%{
+        transform: translateX(3px);
+    }
+    50%{
+        transform: translateX(-3px);
+    }
+    75%{
+        transform: translateX(3px);
+    }
+    100%{
+        transform: translateX(-3px);
+    }
+}
